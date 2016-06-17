@@ -23,7 +23,7 @@ function adminer_object() {
             <th>
               <?php echo lang('Database'); ?>
             <td>
-              <input type="text" name="auth[db]">
+              <input type="text" name="auth[db]" value="<?php echo getenv('DB_PATH'); ?>">
         </table>
         <?php
             echo "<p><input type='submit' value='" . lang('Login') . "'>\n";
@@ -32,7 +32,7 @@ function adminer_object() {
         
         function login($login, $password) {
           // validate user submitted credentials
-          return ($login == 'admin' && $password == '');
+          return ($login == getenv('DB_USER') && $password == getenv('DB_PASS'));
         }
 
         function database() {
