@@ -1,9 +1,6 @@
 
 This projects includes a Dockerfile to bundle adminer as part of a Docker image.
 
-Use Docker image
-----------------
-
 $ docker run -d -e DB_PATH=/data/database.sqlite nesrait/adminer-sqlite
 
 Adminer overview
