@@ -18,7 +18,7 @@ function adminer_object() {
             <th>
               <?php echo lang('Password'); ?>
             <td>
-              <input type="password" name="password">
+              <input type="password" name="auth[password]">
           <tr>
             <th>
               <?php echo lang('Database'); ?>
@@ -32,7 +32,7 @@ function adminer_object() {
         
         function login($login, $password) {
           // validate user submitted credentials
-          return ($login == getenv('DB_USER') && $password == getenv('DB_PASS'));
+          return ($login == getenv('DB_ADMIN') && $password == getenv('DB_ADMIN_PASS'));
         }
 
         function database() {
