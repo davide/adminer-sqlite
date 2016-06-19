@@ -32,7 +32,7 @@ function adminer_object() {
         
         function login($login, $password) {
           // validate user submitted credentials
-          return ($login == getenv('DB_EDITOR') && $password == getenv('DB_EDITOR_PASS'));
+          return ($login == getenv('DB_USER') && $password == getenv('DB_PASS'));
         }
 
         function database() {
@@ -43,6 +43,6 @@ function adminer_object() {
      return new AdminerSoftware;
 }
 
-include "editor-4.2.5-en.php"; // or editor-3.4.0.php what ever the version which u r using
+include "adminer-4.2.5-en.php"; // or editor-3.4.0.php what ever the version which u r using
 
 ?>
